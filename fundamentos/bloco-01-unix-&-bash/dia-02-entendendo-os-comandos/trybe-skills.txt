@@ -6,4 +6,5 @@ O que vou aprender na Trybe:
 - CSS
 - React
 - JavaScript
+- Python
 - Soft skills
