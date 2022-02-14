@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+    <script>
+        // console.log(document.querySelector('#elementoOndeVoceEsta').parentNode.style.color = "red")
+        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+
+        const pai = elementoOndeVoceEsta.parentElement;
+        pai.style.color = "red"
+
+
+        // console.log(document.querySelector('#primeiroFilhoDoFilho').innerText = "Shiro é um gato lindo")
+
+        const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+        primeiroFilhoDoFilho.innerText = "something something";
+
+        const primeiroFilho = pai.firstElementChild;
+
+        const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+
+        const textElement = elementoOndeVoceEsta.nextSibling;
+        
+        const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+
+        const quartoEUltimoFilho = pai.lastElementChild;
+
+        const terceiroFilhoDePai = pai.children[2]
+        //ou: pai.lastElementChild.previousElementSibling
+
+        // crie elemento irmão para elementoOndeVoceEsta
+        let novoIrmao = document.createElement('section');
+        novoIrmao.id = 'irmaoElementoOndeVoceEsta'
+        pai.appendChild(novoIrmao)
+
+        //crie um filho para elementoOndeVoceEsta
+        let novoFilhoElementoOndeVoceEsta = document.createElement('section');
+        novoFilhoElementoOndeVoceEsta.id = 'novoFilho';
+        elementoOndeVoceEsta.appendChild(novoFilhoElementoOndeVoceEsta)
+
+        //crie um filho para primeiroFilhoDoFilho
+        const neto = document.createElement('section');
+        neto.id = 'netoDoPai';
+        primeiroFilhoDoFilho.appendChild(neto);
+
+        //Remova todos os elementos filhos de ''paiDoPai'' exceto 'pai' , 'elementoOndeVoceEsta' e 'primeiroFilhoDoFilho' .
+        for (index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+            const currentChildren = pai.childNodes[index];
+            if (currentChildren.id !== 'elementoOndeVoceEsta') {
+                currentChildren.remove();
+            }
+        }
+        // const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho')
+        // elementoOndeVoceEsta.removeChild(segundoEUltimoFilhoDoFilho) //ou segundoEUltimoFilhoDoFilho.remove()
+
+        for(index = elementoOndeVoceEsta.childNodes.length -1; index >= 0; index-= 1) {
+            const currentChildren = elementoOndeVoceEsta.childNodes[index];
+            if(currentChildren.id !== 'primeiroFilhoDoFilho') {
+                currentChildren.remove();
+            }
+        }
+    </script>
+</body>
+</html>
