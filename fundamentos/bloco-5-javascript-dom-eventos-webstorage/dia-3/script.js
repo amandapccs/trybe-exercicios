@@ -29,6 +29,10 @@ function createDaysOfTheWeek() {
         dayDez.className = "day friday"
     }
 
+    if(dayDez.innerText == 25) {
+        dayDez.className = "day holiday friday"
+    }
+
     days.appendChild(dayDez);
   }
 

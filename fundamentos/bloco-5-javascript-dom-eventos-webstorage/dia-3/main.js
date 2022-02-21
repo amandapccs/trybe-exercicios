@@ -24,10 +24,13 @@ function handleChangeTech(event) {
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-input.addEventListener('input', function(event) {
-    const techElement = document.querySelector('.tech');
-    techElement.innerText = event.target.value;
-  });
+  input.addEventListener('input', changeTechText)
+
+  function changeTechText (event) {
+    const techSelected = document.querySelector('.tech');
+    techSelected.innerText = event.target.value
+  }
+
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
@@ -59,6 +62,7 @@ function resetText(event) {
 }
 
 firstLi.addEventListener('dblclick', resetText);
+secondLi.addEventListener('dblclick', resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
