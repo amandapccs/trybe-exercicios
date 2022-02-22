@@ -94,7 +94,25 @@
       </form>
     </main>
     <script>
+        window.addEventListener('DOMContentLoaded', function()
+{
+  var $min = document.querySelector('.real [name="whenStart"]'),
+      $max = document.querySelector('.real [name="whenEnd"]');
 
+      $min.DatePickerX.init({
+        mondayFirst: true,
+        minDate    : new Date(2022, 1, 20),
+        maxDate    : $max
+      });
+
+      $max.DatePickerX.init({
+        mondayFirst: true,
+        minDate    : $min,
+        maxDate    : new Date(2022, 2, 25),
+        clearButton: false
+      });
+
+});
     </script>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="script.js"></script>
