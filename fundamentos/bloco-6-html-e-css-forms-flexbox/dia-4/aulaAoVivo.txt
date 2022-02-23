@@ -1,0 +1,15 @@
+- Link CDN: font-awesome library de ícones
+- Link google fonts
+- header nav
+- font-size: 100%? ---> considera tamanho padrão de todo navegador (chrome é 16px), se colocasse 50% ficaria uma fonte de 8px.
+- cursor:pointer!!! passa o mouse por cima, muda o desenho do mouse
+- opacity: 0.4 (fica pouco vísivel) --> colocar 1 no a:hover e 0.8 no a.
+
+- a:visited (link roxo) a:active (no momento que clica) ---> colocar list-style: none !!!!!!!!!!
+
+- min-height: 100vh (view port -> vh) -> ocupa todo o view
+- text-transform: uppercase;
+
+- mais novidades:
+backgound-clip: content-box (como se já tivesse margem a imagem -> como se enquadrasse, uma moldura)
+background-position: center
