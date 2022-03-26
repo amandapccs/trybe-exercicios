@@ -1,0 +1,24 @@
+ul {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: x-large;
+    border: 3px dotted salmon;
+    padding: 5px 5px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    background-color: pink;
+}
+
+h1 {
+    text-align: center;
+}
