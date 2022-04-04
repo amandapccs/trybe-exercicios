@@ -1,0 +1,38 @@
+.header {
+  color: lightslategrey;
+  text-align: center;
+  background-color:rgba(173, 216, 230, 0.575);
+  margin: 0 0 20px 0;
+}
+
+.content {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  /* align-items: center; */
+  /* width: 100%; */
+  margin: auto;
+}
+
+#root {
+  background-color: lightyellow;
+  height: 100vh;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  background-color: rgba(135, 206, 250, 0.472);
+  border-radius: 5%;
+}
+
+.footer {
+  background-color:rgba(173, 216, 230, 0.575);
+  text-align: center;
+  color: lightslategrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
