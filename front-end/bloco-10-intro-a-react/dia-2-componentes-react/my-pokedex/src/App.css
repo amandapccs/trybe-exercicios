@@ -1,0 +1,23 @@
+.title {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+  flex: 1 1 0;
+  min-width: 25%;
+  margin: 10px 10px;
+  border: 1px solid lightgray;
+  border-radius: 2%;
+}
