@@ -6,10 +6,24 @@ class Pokedex extends React.Component {
     render() {
         return (
             <div className="pokedex">
-                {pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
+                {pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}{}
             </div>
         )
     }
 }
 
 export default Pokedex;
+
+// class Pokedex extends React.Component {
+//     render() {
+//         const { pokemons } = this.props;
+
+//         return (
+//             <div className="pokedex">
+//                 {pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
+//             </div>
+//         )
+//     }
+// }
+
+// export default Pokedex;
